@@ -3,6 +3,7 @@ import InputField from "../components/InputField";
 import toast from "react-hot-toast";
 import ResultCard from "../components/ResultCard";
 import { calcularResultado } from "../services/calculator";
+import { Calculator, Eraser } from "lucide-react";
 
 export default function Home() {
   const [lp, setLp] = useState("");
@@ -55,7 +56,7 @@ export default function Home() {
   return (
     <div
       className="
-        min-h-screen
+        
         flex
         items-center
         justify-center
@@ -64,13 +65,13 @@ export default function Home() {
     >
       <div
         className="
-          bg-white
-          shadow-lg
-          rounded-2xl
-          p-6
-          w-full
-          max-w-md
-        "
+    bg-white
+    shadow-lg
+    rounded-2xl
+    p-6
+    w-full
+    max-w-xl
+  "
       >
         <h1
           className="
@@ -84,14 +85,14 @@ export default function Home() {
         </h1>
 
         <InputField
-          label="Pontuação LP"
+          label="SPAECE LP"
           value={lp}
           placeholder={"ex. 290,43"}
           onChange={(e) => setLp(formatarNumero(e.target.value))}
         />
 
         <InputField
-          label="Pontuação MT"
+          label="SPAECE MT"
           value={mt}
           placeholder={"ex. 308,29"}
           onChange={(e) => setMt(formatarNumero(e.target.value))}
@@ -108,17 +109,22 @@ export default function Home() {
           <button
             onClick={handleCalcular}
             className="
-      flex-1
-      bg-blue-600
-      text-white
-      py-3
-      rounded-lg
-      font-semibold
-      hover:bg-blue-700
-      transition
-    "
+    flex-1
+    bg-blue-600
+    text-white
+    py-3
+    rounded-lg
+    font-semibold
+    hover:bg-blue-700
+    transition
+    flex
+    items-center
+    justify-center
+    gap-2
+  "
           >
-            Calcular
+            <Calculator size={18} />
+            Simular
           </button>
 
           <button
@@ -129,12 +135,17 @@ export default function Home() {
     py-3
     rounded-lg
     font-semibold
+    bg-gray-200
+    flex
+    items-center
+    justify-center
+    gap-2
     disabled:bg-gray-100
     disabled:text-gray-400
     disabled:cursor-not-allowed
-    bg-gray-200
   "
           >
+            <Eraser size={18} />
             Limpar
           </button>
         </div>

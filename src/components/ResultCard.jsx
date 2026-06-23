@@ -4,47 +4,74 @@ export default function ResultCard({ resultado }) {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
+
   return (
     <div
       className="
         mt-6
-        rounded-xl
         bg-white
-        shadow-lg
+        rounded-2xl
+        shadow-md
         border
+        border-slate-200
+        border-l-4
+        border-l-green-600
         p-6
       "
     >
-      <h2 className="text-xl font-bold mb-4">Resultados</h2>
+      <h2 className="text-2xl font-bold text-green-700 mb-6">Resultados</h2>
 
       <div className="space-y-3">
-        <div className="flex justify-between">
-          <span>LP Padronizado</span>
-          <span>{formatar(resultado.lpPadronizado)}</span>
+        <div className="bg-slate-50 border rounded-xl p-4">
+          <div className="grid grid-cols-2 items-center">
+            <span className="text-sm ">LP Padronizado</span>
+
+            <span className="text-right text-xl font-bold">
+              {formatar(resultado.lpPadronizado)}
+            </span>
+          </div>
         </div>
 
-        <div className="flex justify-between">
-          <span>MT Padronizado</span>
-          <span>{formatar(resultado.mtPadronizado)}</span>
+        <div className="bg-slate-50 border rounded-xl p-4">
+          <div className="grid grid-cols-2 items-center">
+            <span className="text-sm">MT Padronizado</span>
+
+            <span className="text-right text-xl font-bold">
+              {formatar(resultado.mtPadronizado)}
+            </span>
+          </div>
         </div>
 
-        <hr />
+        <div className="bg-slate-50 border rounded-xl p-4">
+          <div className="grid grid-cols-2 items-center">
+            <span className="text-sm">IN - Desempenho</span>
 
-        <div className="flex justify-between">
-          <span>IN - Desempenho</span>
-          <span>{formatar(resultado.inDesempenho)}</span>
+            <span className="text-right text-xl font-bold">
+              {formatar(resultado.inDesempenho)}
+            </span>
+          </div>
         </div>
 
-        <div className="flex justify-between">
-          <span>IP - Fluxo</span>
-          <span>{formatar(resultado.ipFluxo)}</span>
+        <div className="bg-slate-50 border rounded-xl p-4">
+          <div className="grid grid-cols-2 items-center">
+            <span className="text-sm">IP - Fluxo</span>
+
+            <span className="text-right text-xl font-bold">
+              {formatar(resultado.ipFluxo)}
+            </span>
+          </div>
         </div>
 
-        <hr />
+        <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+          <div className="grid grid-cols-2 items-center">
+            <span className="text-sm font-semibold text-green-700">
+              IDE Médio
+            </span>
 
-        <div className="flex justify-between text-xl font-bold text-green-600">
-          <span>IDE Médio</span>
-          <span>{formatar(resultado.ideMedio)}</span>
+            <span className="text-right text-2xl font-bold text-green-700">
+              {formatar(resultado.ideMedio)}
+            </span>
+          </div>
         </div>
       </div>
     </div>
