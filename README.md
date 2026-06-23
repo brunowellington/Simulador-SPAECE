@@ -7,7 +7,7 @@ Sistema desenvolvido em React JS para auxiliar gestores escolares no cálculo de
 A aplicação permite que o usuário informe:
 
 - Pontuação de Língua Portuguesa (LP)
-- Pontuação de Matemática (LM)
+- Pontuação de Matemática (MT)
 - IP - Fluxo
 
 E obtenha automaticamente:
